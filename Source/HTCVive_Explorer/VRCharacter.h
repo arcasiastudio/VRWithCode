@@ -54,10 +54,10 @@ protected:
 	class UCameraComponent* Camera;
 	
 	UPROPERTY(EditAnywhere)
-	class UMotionControllerComponent* LeftController;
+	class AHandController* LeftController;
 
 	UPROPERTY(EditAnywhere)
-	class UMotionControllerComponent* RightController;
+	class AHandController* RightController;
 
 	UPROPERTY(VisibleAnywhere)
 	class USplineComponent* TeleportPath;
@@ -110,4 +110,7 @@ private:
 
 	UPROPERTY(EditDefaultsOnly)
 		class UMaterialInterface* TeleportArchMaterial;
+
+	UPROPERTY(EditDefaultsOnly)
+		TSubclassOf<AHandController> HandControllerClass;
 };
